@@ -1,0 +1,54 @@
+{
+    "name": "erickne/lararock",
+    "description": "RockApps Laravel Package",
+    "keywords": [
+        "erickne",
+        "lararock"
+    ],
+    "homepage": "https://github.com/erickne/lararock",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Erick Engelhardt",
+            "email": "erickne@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Erickne\\Lararock\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Erickne\\Lararock\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Erickne\\Lararock\\LararockServiceProvider"
+            ],
+            "aliases": {
+                "Lararock": "Erickne\\Lararock\\LararockFacade"
+            }
+        }
+    }
+}
